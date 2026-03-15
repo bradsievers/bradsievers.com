@@ -1,0 +1,160 @@
+/* === BASE.CSS — Design Tokens & Reset === */
+
+/* --- Reset --- */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+body { min-height: 100vh; line-height: 1.6; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+img, picture, video, canvas, svg { display: block; max-width: 100%; }
+input, button, textarea, select { font: inherit; }
+p, h1, h2, h3, h4, h5, h6 { overflow-wrap: break-word; }
+a { color: inherit; text-decoration: none; }
+ul, ol { list-style: none; }
+button { cursor: pointer; border: none; background: none; }
+
+/* --- Spacing (4px base) --- */
+:root {
+  --space-0: 0px;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-20: 80px;
+  --space-24: 96px;
+  --space-32: 128px;
+}
+
+/* --- Content Width --- */
+:root {
+  --content-narrow: 640px;
+  --content-default: 960px;
+  --content-wide: 1200px;
+  --content-full: 100%;
+}
+
+/* --- Border Radius --- */
+:root {
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-2xl: 24px;
+  --radius-full: 9999px;
+}
+
+/* --- Typography Scale (fluid) --- */
+:root {
+  --text-xs: clamp(0.75rem, 0.7rem + 0.15vw, 0.8125rem);
+  --text-sm: clamp(0.8125rem, 0.78rem + 0.15vw, 0.875rem);
+  --text-base: clamp(0.9375rem, 0.9rem + 0.18vw, 1.0625rem);
+  --text-lg: clamp(1.125rem, 1.05rem + 0.35vw, 1.3125rem);
+  --text-xl: clamp(1.375rem, 1.2rem + 0.8vw, 1.75rem);
+  --text-2xl: clamp(1.75rem, 1.4rem + 1.6vw, 2.5rem);
+  --text-3xl: clamp(2.25rem, 1.7rem + 2.5vw, 3.25rem);
+  --text-hero: clamp(2.75rem, 2rem + 3.5vw, 4.5rem);
+}
+
+/* --- Shadows --- */
+:root {
+  --shadow-sm: 0 1px 2px rgba(45,45,45,0.06), 0 1px 4px rgba(45,45,45,0.04);
+  --shadow-md: 0 2px 4px rgba(45,45,45,0.06), 0 4px 16px rgba(45,45,45,0.04);
+  --shadow-lg: 0 4px 8px rgba(45,45,45,0.06), 0 12px 32px rgba(45,45,45,0.06);
+}
+
+/* --- Light Mode (default) --- */
+:root {
+  --color-primary: #6B8F71;
+  --color-primary-hover: #5A7A60;
+  --color-primary-light: rgba(107,143,113,0.1);
+  --color-secondary: #2C3E50;
+  --color-secondary-hover: #1e2d3d;
+  --color-bg: #FAF9F6;
+  --color-surface: #FFFFFF;
+  --color-card: #F5F5F0;
+  --color-text: #2D2D2D;
+  --color-text-muted: #6B7280;
+  --color-border: rgba(45,45,45,0.1);
+  --color-border-strong: rgba(45,45,45,0.2);
+}
+
+/* --- Dark Mode --- */
+[data-theme="dark"] {
+  --color-primary: #8BB093;
+  --color-primary-hover: #7aa085;
+  --color-primary-light: rgba(139,176,147,0.12);
+  --color-secondary: #5B7B95;
+  --color-secondary-hover: #6d8da7;
+  --color-bg: #1A1A1A;
+  --color-surface: #242424;
+  --color-card: #2A2A2A;
+  --color-text: #E5E5E0;
+  --color-text-muted: #9CA3AF;
+  --color-border: rgba(255,255,255,0.08);
+  --color-border-strong: rgba(255,255,255,0.15);
+  --shadow-sm: 0 1px 2px rgba(0,0,0,0.2), 0 1px 4px rgba(0,0,0,0.15);
+  --shadow-md: 0 2px 4px rgba(0,0,0,0.2), 0 4px 16px rgba(0,0,0,0.15);
+  --shadow-lg: 0 4px 8px rgba(0,0,0,0.25), 0 12px 32px rgba(0,0,0,0.2);
+}
+
+/* --- Transitions --- */
+:root {
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  --duration-fast: 150ms;
+  --duration-normal: 250ms;
+  --duration-slow: 400ms;
+}
+
+/* --- Base Typography --- */
+body {
+  font-family: 'Work Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: var(--text-base);
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  transition: background-color var(--duration-slow) var(--ease-in-out),
+              color var(--duration-slow) var(--ease-in-out);
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Zodiak', Georgia, 'Times New Roman', serif;
+  font-weight: 500;
+  line-height: 1.2;
+  color: var(--color-text);
+}
+
+h1 { font-size: var(--text-2xl); letter-spacing: -0.01em; }
+h2 { font-size: var(--text-xl); }
+h3 { font-size: var(--text-lg); }
+h4 { font-size: var(--text-base); font-weight: 600; }
+
+p { line-height: 1.7; color: var(--color-text-muted); }
+p + p { margin-top: var(--space-4); }
+
+strong { font-weight: 600; color: var(--color-text); }
+
+/* --- Focus --- */
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* --- Selection --- */
+::selection {
+  background: var(--color-primary-light);
+  color: var(--color-text);
+}
+
+/* --- Prefers Reduced Motion --- */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  html { scroll-behavior: auto; }
+}
