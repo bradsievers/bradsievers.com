@@ -29,11 +29,20 @@
 {
   "@context": "https://schema.org",
   "@type": ["MedicalBusiness", "Psychologist"],
+  "@id": "https://bradsievers.com/#business",
   "name": "Brad Sievers, PsyD",
   "description": "Licensed provisional psychologist providing evidence-based therapy for PTSD, OCD, anxiety disorders, and more. Serving adults in the Des Moines area and across Iowa, in person and via telehealth.",
   "url": "https://bradsievers.com",
+  "image": "https://bradsievers.com/assets/headshot.jpg",
   "telephone": "(515) 984-0225",
   "email": "intake@willowgrovetherapy.com",
+  "sameAs": [
+    "https://www.linkedin.com/in/bradlsievers",
+    "https://www.psychologytoday.com/us/therapists/brad-sievers-johnston-ia/1584151",
+    "https://insighttimer.com/BradSievers",
+    "https://www.willowgrovetherapy.com/brad-sievers-psyd"
+  ],
+  "founder": {"@id": "https://bradsievers.com/#person"},
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "9105 Northpark Drive",
@@ -97,6 +106,65 @@
   "openingHours": "Mo-Fr 08:00-16:00",
   "priceRange": "$$",
   "isAcceptingNewPatients": true
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": "https://bradsievers.com/#person",
+  "name": "Brad Sievers",
+  "givenName": "Brad",
+  "familyName": "Sievers",
+  "honorificSuffix": "PsyD",
+  "jobTitle": "Psychologist",
+  "description": "Provisionally licensed psychologist in Iowa specializing in evidence-based therapy for PTSD, OCD, and anxiety disorders.",
+  "url": "https://bradsievers.com",
+  "image": "https://bradsievers.com/assets/headshot.jpg",
+  "telephone": "(515) 984-0225",
+  "email": "intake@willowgrovetherapy.com",
+  "sameAs": [
+    "https://www.linkedin.com/in/bradlsievers",
+    "https://www.psychologytoday.com/us/therapists/brad-sievers-johnston-ia/1584151",
+    "https://insighttimer.com/BradSievers",
+    "https://www.willowgrovetherapy.com/brad-sievers-psyd"
+  ],
+  "worksFor": {
+    "@type": "MedicalOrganization",
+    "name": "Willow Grove Therapy Group",
+    "url": "https://www.willowgrovetherapy.com"
+  },
+  "workLocation": {
+    "@type": "Place",
+    "name": "Willow Grove Therapy Group",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "9105 Northpark Drive",
+      "addressLocality": "Johnston",
+      "addressRegion": "IA",
+      "postalCode": "50131",
+      "addressCountry": "US"
+    }
+  },
+  "alumniOf": [
+    {"@type": "CollegeOrUniversity", "name": "Baylor University"},
+    {"@type": "CollegeOrUniversity", "name": "Colorado State University"},
+    {"@type": "CollegeOrUniversity", "name": "Iowa State University"}
+  ],
+  "hasCredential": [
+    {
+      "@type": "EducationalOccupationalCredential",
+      "credentialCategory": "Licensed Provisional Psychologist",
+      "recognizedBy": {"@type": "State", "name": "Iowa"}
+    },
+    {
+      "@type": "EducationalOccupationalCredential",
+      "credentialCategory": "Doctor of Psychology (PsyD)",
+      "educationalLevel": "Doctoral",
+      "issuedBy": {"@type": "CollegeOrUniversity", "name": "Baylor University"}
+    }
+  ],
+  "knowsAbout": ["PTSD", "OCD", "Social Anxiety Disorder", "Panic Disorder", "Agoraphobia", "Specific Phobias", "Generalized Anxiety Disorder", "Body Dysmorphic Disorder", "Depression", "Grief", "Life Transitions", "Cognitive Behavioral Therapy", "Acceptance and Commitment Therapy", "Exposure Therapy", "ERP", "Prolonged Exposure", "CPT", "Written Exposure Therapy", "Telehealth"]
 }
 </script>
 </head>
