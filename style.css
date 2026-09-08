@@ -914,3 +914,43 @@
   line-height: 1.7;
   margin: 0;
 }
+
+/* ============ Announcement bar ============ */
+.announce-bar {
+  background: var(--color-primary-light);
+  color: var(--color-primary-hover);
+  text-align: center;
+  padding: var(--space-3) var(--space-4);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  border-bottom: 1px solid rgba(107,143,113,0.2);
+  line-height: 1.5;
+}
+[data-theme="dark"] .announce-bar {
+  color: var(--color-primary);
+  border-bottom-color: rgba(139,176,147,0.2);
+}
+.announce-bar__dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: var(--color-primary);
+  border-radius: 50%;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+.announce-bar__sep {
+  display: inline-block;
+  margin: 0 8px;
+  opacity: 0.5;
+}
+@media (max-width: 640px) {
+  .announce-bar {
+    font-size: var(--text-xs);
+    padding: var(--space-2) var(--space-3);
+  }
+  .announce-bar__sep,
+  .announce-bar__detail {
+    display: none;
+  }
+}
